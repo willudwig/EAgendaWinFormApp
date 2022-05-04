@@ -42,6 +42,7 @@
             this.btnFuturos = new System.Windows.Forms.Button();
             this.btnPassados = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tbnAddContato = new System.Windows.Forms.Button();
             this.lbHora = new System.Windows.Forms.Label();
             this.tbHora = new System.Windows.Forms.MaskedTextBox();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -77,7 +78,6 @@
             this.pnPassados = new System.Windows.Forms.Panel();
             this.btnLimpaPassados = new System.Windows.Forms.Button();
             this.btnExclPassados = new System.Windows.Forms.Button();
-            this.tbnAddContato = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -190,6 +190,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(817, 214);
             this.panel1.TabIndex = 7;
+            // 
+            // tbnAddContato
+            // 
+            this.tbnAddContato.Location = new System.Drawing.Point(694, 35);
+            this.tbnAddContato.Name = "tbnAddContato";
+            this.tbnAddContato.Size = new System.Drawing.Size(34, 33);
+            this.tbnAddContato.TabIndex = 15;
+            this.tbnAddContato.Text = "...";
+            this.toolTip1.SetToolTip(this.tbnAddContato, "abrir tela de contatos");
+            this.tbnAddContato.UseVisualStyleBackColor = true;
+            this.tbnAddContato.Click += new System.EventHandler(this.tbnAddContato_Click);
             // 
             // lbHora
             // 
@@ -543,17 +554,6 @@
             this.btnExclPassados.Text = "Excluir";
             this.btnExclPassados.UseVisualStyleBackColor = false;
             this.btnExclPassados.Click += new System.EventHandler(this.btnExclPassados_Click);
-            // 
-            // tbnAddContato
-            // 
-            this.tbnAddContato.Location = new System.Drawing.Point(694, 35);
-            this.tbnAddContato.Name = "tbnAddContato";
-            this.tbnAddContato.Size = new System.Drawing.Size(34, 33);
-            this.tbnAddContato.TabIndex = 15;
-            this.tbnAddContato.Text = "...";
-            this.toolTip1.SetToolTip(this.tbnAddContato, "abrir tela de contatos");
-            this.tbnAddContato.UseVisualStyleBackColor = true;
-            this.tbnAddContato.Click += new System.EventHandler(this.tbnAddContato_Click);
             // 
             // FormCompromisso
             // 

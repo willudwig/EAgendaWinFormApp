@@ -32,6 +32,8 @@ namespace ControleTarefas.Infra.Arquivo
             var x = registro.Find(r => r.numero.Equals(IdSelecionado));
 
             registro.Remove(x);
+
+            GravarArquivo();
         }
         public List<EntidadeBase> SelecionarTodos()
         {

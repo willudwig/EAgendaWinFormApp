@@ -67,17 +67,12 @@ namespace Cadastro.WinFormsApp
             if (contatos == null)
             {
                 contatos = new();
-                RegistroRefresh();
-                return;
             }
-            else
-                RegistroRefresh();
 
             for (int i = 0; i < contatos.Count; i++)
             {
                cbContato.Items.Add(contatos[i].nome);
             }
-    
         }
         private bool Validar()
         {
@@ -119,7 +114,12 @@ namespace Cadastro.WinFormsApp
             {
                 MessageBox.Show("Deve haver um contato", "Aviso");
                 return false;
-            } 
+            }
+            if (cbContato.Text == "selecionar...")
+            {
+                MessageBox.Show("Deve selecionar um contato na lista", "Aviso");
+                return false;
+            }
 
             return true;
         }
@@ -275,7 +275,7 @@ namespace Cadastro.WinFormsApp
 
             return n;
         }
-
+      
         #endregion
 
         #endregion
@@ -337,7 +337,10 @@ namespace Cadastro.WinFormsApp
                 PreencherTextBoxesComSelecionado(compSelecionado);
             }
             else
+            {
+                MessageBox.Show("Selecione ao menos um ítem", "Aviso");
                 return;
+            }
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -349,7 +352,10 @@ namespace Cadastro.WinFormsApp
                 lvFuturos.Items.RemoveAt(lvFuturos.SelectedIndices[0]);
             }
             else
+            {
+                MessageBox.Show("Selecione ao menos um ítem", "Aviso");
                 return;
+            }
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
