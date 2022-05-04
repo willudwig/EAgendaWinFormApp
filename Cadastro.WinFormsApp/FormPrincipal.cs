@@ -45,6 +45,7 @@ namespace Cadastro.WinFormsApp
             {
                 fCompromisso = new();
                 fCompromisso.Show();
+                fCompromisso.fPrincipal = this;
             }
             else
                 fCompromisso.Show();
@@ -61,8 +62,10 @@ namespace Cadastro.WinFormsApp
                 fContato.Show();
         }
 
-        private void ExibirCompsParaHoje() 
+        public void ExibirCompsParaHoje() 
         {
+            richTextBox1.Clear();
+
             List<Compromisso> compromissos = repoCompromisso.CarregarArquivoCompromisso(diretorioCompromisso);
 
             if (compromissos == null)
@@ -75,6 +78,5 @@ namespace Cadastro.WinFormsApp
                 richTextBox1.Text += compsHoje[i].assunto + "\n";
             }
         }
-
     }
 }

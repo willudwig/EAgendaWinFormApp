@@ -491,5 +491,10 @@ namespace Cadastro.WinFormsApp
             FormContato fContato = new();
             fContato.ShowDialog();
         }
+
+        private void FormCompromisso_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            fPrincipal.ExibirCompsParaHoje();
+        }
     }
 }

@@ -576,6 +576,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tela Compromisso";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormCompromisso_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormCompromisso_FormClosed);
             this.Load += new System.EventHandler(this.FormCompromisso_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
